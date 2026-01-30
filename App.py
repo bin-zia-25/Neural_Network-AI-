@@ -1,6 +1,7 @@
 import streamlit as st
 import psutil
 import numpy as np
+import platform
 import time
 import pandas as pd
 from keras.models import load_model
@@ -23,6 +24,10 @@ brain = ModelSingleton()
 st.sidebar.title("⚙️ System Internals")
 st.sidebar.info(f"**Singleton Status:** Active\n\n**Model Loaded At:** {brain.load_time}")
 st.sidebar.write("Using a single instance of the model ensures Windows RAM is protected.")
+
+st.sidebar.subheader("📍 Deployment Info")
+st.sidebar.write(f"**Processor:** {platform.processor()}")
+st.sidebar.write(f"**OS:** {platform.system()}") # This will say 'Linux' on the web!
 
 # --- MAIN UI ---
 st.title("🛡️ AI System Health Monitor")
