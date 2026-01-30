@@ -62,7 +62,7 @@ while True:
     # 1. DATA COLLECTION
     cpu = psutil.cpu_percent(interval=1)
     ram = psutil.virtual_memory().percent                           
-    disk = psutil.disk_usage('C:\\').percent
+    disk = psutil.disk_usage('/').percent
 
     # 2. PREDICTION (with safety clamp)
     input_data = np.array([[cpu/100, ram/100, disk/100]])
