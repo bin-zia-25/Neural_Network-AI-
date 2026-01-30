@@ -23,7 +23,7 @@ brain = ModelSingleton()
 # --- SIDEBAR: SYSTEM INFO & SINGLETON STATUS ---
 st.sidebar.title("⚙️ System Internals")
 st.sidebar.info(f"**Singleton Status:** Active\n\n**Model Loaded At:** {brain.load_time}")
-st.sidebar.write("Using a single instance of the model ensures Windows RAM is protected.")
+st.sidebar.write("Using a single instance of the model ensures System RAM is protected.")
 
 st.sidebar.subheader("📍 Deployment Info")
 st.sidebar.write(f"**Processor:** {platform.processor()}")
